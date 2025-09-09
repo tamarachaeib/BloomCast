@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BloomCast Creations</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      overflow-x: hidden;
+      background: #e0f7fa; /* light green-blue */
+      color: #264653; /* dark blue-green */
+    }
+       
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #2a9d8f, #264653);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .brand:hover { transform: scale(1.1); }
+
+.nav {
+  background: rgba(224, 247, 250, 0.95); /* light blue-green nav */
+  box-shadow: 0 2px 4px rgba(38, 70, 83, 0.1);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+}
+
+.nav ul li a {
+  color: #264653;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.nav ul li a:hover {
+  color: #2a9d8f;
+}
+
+.section {
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  color: #264653;
+}
+
+
+    .gradient-text {
+      background: linear-gradient(90deg, #2a9d8f, #264653);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Creations Section */
+    .creations-section {
+      background: url('images/img13.jpg') no-repeat center center;
+      background-size: cover;
+      position: relative;
+      padding: 6rem 1rem 3rem 1rem;
+    }
+    .creations-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 150, 136, 0.3); /* green-blue overlay for contrast */
+      z-index: 0;
+    }
+
+    .creations-section h2 {
+      position: relative;
+      z-index: 10;
+      font-family: 'Dancing Script', cursive;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+      gap: 2rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(38, 70, 83, 0.2);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(38, 70, 83, 0.4);
+    }
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    
+.btn {
+  background: #2a9d8f; /* green-blue button */
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(42, 157, 143, 0.4);
+}
+.btn:hover {
+  background: #264653;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(38, 70, 83, 0.6);
+}
+    .card p {
+      padding: 1rem;
+      font-weight: 600;
+      color: #264653;
+    }
+    
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav fixed w-full top-0 z-50 px-6 py-4 flex items-center shadow-md relative">
+  <!-- Left menu -->
+  <ul class="flex space-x-6 text-lg font-semibold">
+    <li><a href="index.html" class="transition-colors duration-300 hover:text-[#2a9d8f]">Home</a></li>
+    <li><a href="index.html" class="transition-colors duration-300 hover:text-[#2a9d8f]">About</a></li>
+  </ul>
+
+  <!-- Brand -->
+  <h1 class="brand text-2xl font-bold absolute left-1/2 transform -translate-x-1/2">
+    BloomCast
+  </h1>
+
+  <!-- Right menu -->
+  <ul class="flex space-x-6 text-lg font-semibold ml-auto">
+    <li><a href="creations.html" class="transition-colors duration-300 hover:text-[#2a9d8f]">Creations</a></li>
+    <li>
+      <a href="touch.html" class="btn px-6 py-2 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-[#264653]">
+        Get In Touch
+      </a>
+    </li>
+  </ul>
+</nav>
+<!-- Creations Section -->
+<section class="creations-section mt-24 px-4">
+  <h2 class="gradient-text text-3xl font-bold mb-8 text-center">Our Creations</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <!-- Example card 1 -->
+    <div class="card cursor-pointer" onclick="openModal('images/pic1.jpeg', 'Creation 1')">
+      <img src="images/pic1.jpeg" alt="Creation 1">
+<p>Sustainability in Style 🌿🪴  Blending recycled plastic and glass with gypsum to create beautiful, eco-conscious home decor. One piece at a time, we shape a greener future.  </p> 
+ </div>
+    <!-- Example card 2 -->
+    <div class="card cursor-pointer" onclick="openModal('images/pic2.jpeg','Creation 2')">
+      <img src="images/pic2.jpeg" alt="Creation 2">
+      <p>From Waste to Art 🌱♻️ This eco-friendly plant holder was crafted by recycling a plastic detergent container and transforming it into a gypsum decor masterpiece. Turning trash into timeless beauty</p>
+    </div>
+    <!-- Example card 3 -->
+    <div class="card cursor-pointer" onclick="openModal('images/pic3.jpeg','Creation 1&2')">
+      <img src="images/pic3.jpeg" alt="Creation 3">
+      <p>Recycled with Purpose ♻️✨  This unique planter was once a plastic detergent bottle. Now, it’s a symbol of creativity and sustainability. Green innovation starts here</p>
+    </div>
+    <!-- Video card 1 -->
+    <div class="card cursor-pointer" onclick="openVideo('images/vid1.mp4')">
+      <video class="w-full h-52 object-cover" muted>
+        <source src="images/vid1.mp4" type="video/mp4">
+      </video>
+      <p>Magic Of Nature Sustainability 🌱♻️ </p>
+    </div>
+    <!-- Video card 2 -->
+    <div class="card cursor-pointer" onclick="openVideo('images/vid2.mp4')">
+      <video class="w-full h-52 object-cover" muted>
+        <source src="images/vid2.mp4" type="video/mp4">
+      </video>
+      <p>Art Out Of Waste!♻️✨</p>
+    </div>
+  </div>
+</section>
+<!-- Modal for Images -->
+<div id="imageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50" onclick="closeModalOnBg(event)">
+  <div class="relative w-full h-full flex items-center justify-center mx-4">
+    <span class="absolute top-4 right-6 text-white text-4xl cursor-pointer z-50" onclick="closeModal()">&times;</span>
+    <img id="modalImg" class="max-w-full max-h-full rounded-lg" src="" alt="">
+    <p id="modalCaption" class="text-white text-center mt-4 absolute bottom-10 w-full text-lg"></p>
+  </div>
+</div>
+
+<!-- Modal for Videos -->
+<div id="videoModal" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50" onclick="closeVideoModalOnBg(event)">
+  <div class="relative w-full h-full flex items-center justify-center mx-4">
+    <span class="absolute top-4 right-6 text-white text-4xl cursor-pointer z-50" onclick="closeVideoModal()">&times;</span>
+    <video id="modalVideo" class="max-w-full max-h-full rounded-lg" controls>
+      <source src="" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p id="videoCaption" class="text-white text-center mt-4 absolute bottom-10 w-full text-lg"></p>
+  </div>
+</div>
+
+
+<script>
+  function openModal(src, caption) {
+    document.getElementById('modalImg').src = src;
+    document.getElementById('modalCaption').innerText = caption;
+    document.getElementById('imageModal').classList.remove('hidden');
+    document.getElementById('imageModal').classList.add('flex');
+  }
+  function closeModal() {
+    document.getElementById('imageModal').classList.add('hidden');
+    document.getElementById('imageModal').classList.remove('flex');
+  }
+  function closeModalOnBg(e) {
+    if (e.target.id === 'imageModal') closeModal();
+  }
+
+  function openVideoModal(src, caption) {
+    const video = document.getElementById('modalVideo');
+    video.querySelector('source').src = src;
+    video.load();
+    document.getElementById('videoCaption').innerText = caption;
+    document.getElementById('videoModal').classList.remove('hidden');
+    document.getElementById('videoModal').classList.add('flex');
+  }
+
+  function closeVideoModal() {
+    const video = document.getElementById('modalVideo');
+    video.pause();
+    video.currentTime = 0;
+    document.getElementById('videoModal').classList.add('hidden');
+    document.getElementById('videoModal').classList.remove('flex');
+  }
+
+  function closeVideoModalOnBg(e) {
+    if (e.target.id === 'videoModal') closeVideoModal();
+  }
+  function openVideo(src) {
+    document.getElementById('modalVideo').src = src;
+    document.getElementById('videoModal').classList.remove('hidden');
+    document.getElementById('videoModal').classList.add('flex');
+  }
+  function closeVideo() {
+    document.getElementById('videoModal').classList.add('hidden');
+    document.getElementById('videoModal').classList.remove('flex');
+    document.getElementById('modalVideo').pause();
+    document.getElementById('modalVideo').currentTime = 0;
+  }
+
+  // Exit when click on background (not on image/video)
+  function closeModalOnBg(e) {
+    if (e.target.id === 'imageModal') closeModal();
+  }
+  function closeVideoOnBg(e) {
+    if (e.target.id === 'videoModal') closeVideo();
+  }
+</script>
+   
+<!-- Back Button at the bottom of the Creations page -->
+<div class="flex justify-center mt-12 mb-8">
+  <a href="index.html" 
+     class="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out"
+     style="font-family: 'Poppins', sans-serif;">
+    <i class="fas fa-arrow-left"></i> Back to Home
+  </a>
+</div>
+  </div>
+</section>
+
+</body>
+</html>

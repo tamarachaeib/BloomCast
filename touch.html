@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BloomCast - Contact Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+      background: #e0f7fa; /* خلفية أخضر-أزرق فاتحة */
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #2a9d8f, #264653);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .brand:hover { transform: scale(1.1); }
+
+    .nav {
+      background: rgba(224, 247, 250, 0.95); /* أخضر-أزرق فاتح */
+      box-shadow: 0 2px 4px rgba(38,70,83,0.1);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 50;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav a { color: #264653; font-weight: 600; text-decoration: none; transition: color 0.3s; }
+    .nav a:hover { color: #2a9d8f; }
+
+    .contact-section {
+      position: relative;
+      margin-top: 6rem;
+      margin-bottom: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem 1rem;
+    }
+
+    .contact-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('images/img13.jpg') no-repeat center center;
+      background-size: cover;
+      opacity: 0.3;
+      z-index: 0;
+    }
+
+    .contact-content {
+      position: relative;
+      z-index: 10;
+      max-width: 3xl;
+      width: 100%;
+      text-align: center;
+      padding: 2rem;
+      background: rgba(255,255,255,0.85);
+      border-radius: 2rem;
+      box-shadow: 0 10px 30px rgba(38,70,83,0.2);
+      backdrop-filter: blur(5px);
+    }
+
+    .contact-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #264653;
+      margin-bottom: 1rem;
+    }
+    .contact-content p {
+      color: #264653;
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      background: #b2dfdb; /* أخضر-أزرق */
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(38,70,83,0.2);
+      transition: transform 0.3s, background 0.3s;
+      margin-bottom: 1rem;
+    }
+    .contact-card:hover {
+      transform: translateY(-5px);
+      background: #80cbc4;
+    }
+    .contact-card i { font-size: 1.75rem; color: #264653; }
+    .contact-card a { color: #264653; font-weight: 600; text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(to right, #2a9d8f, #264653);
+      color: white;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 9999px;
+      box-shadow: 0 6px 16px rgba(38,70,83,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      margin-top: 2rem;
+    }
+    .back-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(38,70,83,0.4);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="flex space-x-6">
+    <a href="index.html">Home</a>
+    <a href="index.html">About</a>
+  </div>
+  <h1 class="brand">BloomCast</h1>
+  <div class="flex space-x-6">
+    <a href="creations.html">Creations</a>
+    <a href="touch.html" class="btn">Get In Touch</a>
+  </div>
+</nav>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <div class="contact-content">
+    <h1>Get in Touch</h1>
+    <p>We’d love to hear from you! Reach out to us through any of the following channels.</p>
+
+    <div class="contact-card">
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:BloomCast@gmail.com">BloomCast@gmail.com</a>
+    </div>
+
+    <div class="contact-card">
+      <i class="fab fa-whatsapp"></i>
+      <a href="https://wa.me/96176951225" target="_blank">Chat with us on WhatsApp</a>
+    </div>
+
+    <div class="contact-card">
+      <i class="fas fa-phone"></i>
+      <a href="tel:+96176951225">+961 76 951 225</a>
+    </div>
+
+    <a href="index.html" class="back-btn">
+      <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+  </div>
+</section>
+
+</body>
+</html>
