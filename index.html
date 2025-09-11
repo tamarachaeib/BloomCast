@@ -10,7 +10,6 @@
   <style>
   .brand {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
     font-weight: 700;
     background: linear-gradient(90deg, #2a9d8f, #264653);
     -webkit-background-clip: text;
@@ -135,12 +134,18 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  /* Fix numbers for mobile */
+  .latin-numbers {
+    direction: ltr;
+    unicode-bidi: embed;
+  }
   </style>
 </head>
 <body>
 
 <!-- Navigation -->
-<nav class="nav fixed w-full top-0 z-50 px-4 sm:px-6 py-4 flex flex-wrap items-center shadow-md">
+<nav class="nav fixed w-full top-0 z-50 px-4 sm:px-6 py-4 flex flex-wrap items-center justify-between">
   <!-- Left menu -->
   <ul class="flex space-x-4 sm:space-x-6 text-base sm:text-lg font-semibold">
     <li><a href="#home">Home</a></li>
@@ -148,17 +153,13 @@
   </ul>
 
   <!-- Brand -->
-  <h1 class="brand text-xl sm:text-2xl font-bold mx-auto">
-    BloomCast
-  </h1>
+  <h1 class="brand text-xl sm:text-2xl font-bold mx-auto">BloomCast</h1>
 
   <!-- Right menu -->
   <ul class="flex space-x-4 sm:space-x-6 text-base sm:text-lg font-semibold ml-auto">
     <li><a href="creations.html">Creations</a></li>
     <li>
-      <a href="touch.html" class="btn px-4 sm:px-6 py-2 rounded-lg shadow-lg">
-        Get In Touch
-      </a>
+      <a href="touch.html" class="btn px-4 sm:px-6 py-2 rounded-lg shadow-lg">Get In Touch</a>
     </li>
   </ul>
 </nav>
@@ -166,7 +167,7 @@
 <!-- Hero Section -->
 <section id="home" class="hero">
   <h1 class="brand text-3xl sm:text-5xl mb-6 floating">Welcome to BloomCast</h1>
-  <p class="max-w-xl font-bold mb-8 text-base sm:text-lg leading-relaxed px-2">
+  <p class="max-w-full sm:max-w-xl font-bold mb-8 text-base sm:text-lg leading-relaxed px-2">
     Our project focuses on recycling plastic and glass waste into beautiful, handcrafted gypsum decorations that feature real plants. Each piece is designed to add a touch of nature’s elegance to your home while promoting eco-conscious living.
   </p>
   <button class="btn" onclick="window.location.href='creations.html'">Explore Our Creations</button>
@@ -186,29 +187,29 @@
 <!-- SDGs Section -->
 <section id="sdgs" class="section fade-in">
   <h2 class="text-2xl sm:text-3xl font-bold mb-8 text-center gradient-text">Sustainable Development Goals</h2>
-  <div class="flex flex-wrap justify-center gap-6 sm:gap-8">
+  <div class="flex flex-wrap justify-center gap-4 sm:gap-8">
 
-    <div class="card w-40 sm:w-48">
+    <div class="card w-full sm:w-48">
       <img src="sdg/sdg4.jpg" alt="SDG 4" />
       <p class="text-center mt-2 font-semibold text-sm sm:text-lg">SDG 4: Quality Education</p>
     </div>
 
-    <div class="card w-40 sm:w-48">
+    <div class="card w-full sm:w-48">
       <img src="sdg/sdg8.png" alt="SDG 8" />
       <p class="text-center mt-2 font-semibold text-sm sm:text-lg">SDG 8: Decent Work & Growth</p>
     </div>
 
-    <div class="card w-40 sm:w-48">
+    <div class="card w-full sm:w-48">
       <img src="sdg/sdg9.png" alt="SDG 9" />
       <p class="text-center mt-2 font-semibold text-sm sm:text-lg">SDG 9: Innovation & Infrastructure</p>
     </div>
 
-    <div class="card w-40 sm:w-48">
+    <div class="card w-full sm:w-48">
       <img src="sdg/sdg12.png" alt="SDG 12" />
       <p class="text-center mt-2 font-semibold text-sm sm:text-lg">SDG 12: Responsible Production</p>
     </div>
 
-    <div class="card w-40 sm:w-48">
+    <div class="card w-full sm:w-48">
       <img src="sdg/sdg17.png" alt="SDG 17" />
       <p class="text-center mt-2 font-semibold text-sm sm:text-lg">SDG 17: Partnerships</p>
     </div>
@@ -219,8 +220,9 @@
 <!-- Footer -->
 <footer class="bg-[#264653] text-white text-center py-6 mt-12 px-2">
   <p class="text-lg font-semibold">BloomCast</p>
-  <p class="text-sm mt-1">📞 +961 76 951 225</p>
+  <p class="text-sm mt-1 latin-numbers">📞 +961 76 951 225</p>
   <p class="text-xs mt-2 opacity-80">&copy; 2025 BloomCast. All rights reserved.</p>
 </footer>
+
 </body>
 </html>
