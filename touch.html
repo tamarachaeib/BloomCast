@@ -14,12 +14,11 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
       overflow-x: hidden;
-      background: #e0f7fa; /* خلفية أخضر-أزرق فاتحة */
+      background: #e0f7fa;
     }
 
     .brand {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
       font-weight: 700;
       background: linear-gradient(90deg, #2a9d8f, #264653);
       -webkit-background-clip: text;
@@ -30,7 +29,7 @@
     .brand:hover { transform: scale(1.1); }
 
     .nav {
-      background: rgba(224, 247, 250, 0.95); /* أخضر-أزرق فاتح */
+      background: rgba(224,247,250,0.95);
       box-shadow: 0 2px 4px rgba(38,70,83,0.1);
       backdrop-filter: blur(10px);
       position: fixed;
@@ -39,20 +38,21 @@
       z-index: 50;
       padding: 1rem 2rem;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
     }
+
     .nav a { color: #264653; font-weight: 600; text-decoration: none; transition: color 0.3s; }
     .nav a:hover { color: #2a9d8f; }
 
     .contact-section {
-      position: relative;
       margin-top: 6rem;
       margin-bottom: 3rem;
+      padding: 2rem 1rem;
       display: flex;
       justify-content: center;
-      align-items: center;
-      padding: 3rem 1rem;
+      position: relative; /* مهم لعمل ::before */
     }
 
     .contact-section::before {
@@ -61,14 +61,14 @@
       inset: 0;
       background: url('images/img13.jpg') no-repeat center center;
       background-size: cover;
-      opacity: 0.3;
+      opacity: 0.25; /* شفاف قليلاً */
       z-index: 0;
     }
 
     .contact-content {
       position: relative;
       z-index: 10;
-      max-width: 3xl;
+      max-width: 600px;
       width: 100%;
       text-align: center;
       padding: 2rem;
@@ -78,35 +78,28 @@
       backdrop-filter: blur(5px);
     }
 
-    .contact-content h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      color: #264653;
-      margin-bottom: 1rem;
-    }
-    .contact-content p {
-      color: #264653;
-      font-size: 1.125rem;
-      margin-bottom: 2rem;
-    }
+    .contact-content h1 { font-family: 'Playfair Display', serif; font-size: 2rem; color: #264653; margin-bottom: 1rem; }
+    .contact-content p { color: #264653; font-size: 1rem; margin-bottom: 2rem; }
 
     .contact-card {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 1rem;
-      background: #b2dfdb; /* أخضر-أزرق */
+      background: #b2dfdb;
       padding: 1rem;
       border-radius: 1rem;
       box-shadow: 0 4px 12px rgba(38,70,83,0.2);
       transition: transform 0.3s, background 0.3s;
       margin-bottom: 1rem;
+      width: 100%;
+      flex-wrap: wrap;
     }
     .contact-card:hover {
       transform: translateY(-5px);
       background: #80cbc4;
     }
-    .contact-card i { font-size: 1.75rem; color: #264653; }
+    .contact-card i { font-size: 1.75rem; color: #264653; flex-shrink: 0; }
     .contact-card a { color: #264653; font-weight: 600; text-decoration: none; }
     .contact-card a:hover { text-decoration: underline; }
 
@@ -132,14 +125,14 @@
 </head>
 <body>
 
-<!-- Navigation -->
+<!-- Navbar -->
 <nav class="nav">
-  <div class="flex space-x-6">
+  <div class="flex space-x-4 mb-2 sm:mb-0">
     <a href="index.html">Home</a>
-    <a href="index.html">About</a>
+    <a href="index.html#about">About</a>
   </div>
-  <h1 class="brand">BloomCast</h1>
-  <div class="flex space-x-6">
+  <h1 class="brand mx-auto">BloomCast</h1>
+  <div class="flex space-x-4 mb-2 sm:mb-0">
     <a href="creations.html">Creations</a>
     <a href="touch.html" class="btn">Get In Touch</a>
   </div>

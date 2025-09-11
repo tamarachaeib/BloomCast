@@ -1,227 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to BloomCast - Gypsum Plants Decoration Shop</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BloomCast - Gypsum Plants Decoration Shop</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-  <style>
-  .brand {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    background: linear-gradient(90deg, #2a9d8f, #264653);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-  }
-  .brand:hover {
-    transform: scale(1.1);
-  }
-
-  body {
-    background: #e0f7fa;
-    color: #264653;
-    font-family: 'Georgia', serif;
-    overflow-x: hidden;
-  }
-
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: #cce7e8 url('images/pic2.jpeg') no-repeat center center;
-    background-size: cover;
-    position: relative;
-    z-index: 0;
-    padding: 2rem;
-  }
-
-  .nav {
-    background: rgba(224, 247, 250, 0.95);
-    box-shadow: 0 2px 4px rgba(38, 70, 83, 0.1);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 50;
-  }
-
-  .nav ul li a {
-    color: #264653;
-    font-weight: 600;
-    transition: color 0.3s;
-  }
-  .nav ul li a:hover {
-    color: #2a9d8f;
-  }
-
-  .section {
-    padding: 3rem 1rem;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  h1, h2 {
-    color: #264653;
-  }
-
-  .btn {
-    background: #2a9d8f;
-    color: white;
-    border: none;
-    padding: 12px 28px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background 0.3s, transform 0.3s;
-    box-shadow: 0 4px 8px rgba(42, 157, 143, 0.4);
-  }
-  .btn:hover {
-    background: #264653;
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(38, 70, 83, 0.6);
-  }
-
-  .card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(38, 70, 83, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(38, 70, 83, 0.2);
-  }
-
-  .card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-  }
-  .card p {
-    padding: 1rem;
-    font-weight: 600;
-    color: #264653;
-  }
-
-  .fade-in {
-    animation: fadeIn 1.5s ease forwards;
-    opacity: 0;
-  }
-  @keyframes fadeIn {
-    to { opacity: 1; }
-  }
-
-  .floating {
-    animation: float 3s ease-in-out infinite;
-  }
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-
-  .gradient-text {
-    background: linear-gradient(90deg, #2a9d8f, #264653);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  /* Fix numbers for mobile */
-  .latin-numbers {
-    direction: ltr;
-    unicode-bidi: embed;
-  }
-  </style>
+<style>
+body { margin:0; font-family:'Georgia', serif; background:#e0f7fa; color:#264653; overflow-x:hidden; }
+.nav { background: rgba(224,247,250,0.95); backdrop-filter: blur(10px); box-shadow:0 2px 4px rgba(38,70,83,0.1); position:fixed; width:100%; top:0; z-index:50; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;}
+.nav a { color:#264653; font-weight:600; text-decoration:none; transition:color 0.3s; font-size:1rem; }
+.nav a:hover { color:#2a9d8f; }
+.brand { font-family:'Playfair Display', serif; font-weight:700; background:linear-gradient(90deg,#2a9d8f,#264653); -webkit-background-clip:text; -webkit-text-fill-color:transparent; text-shadow:2px 2px 4px rgba(0,0,0,0.2); transition:transform 0.3s; font-size:1.75rem;}
+.brand:hover { transform:scale(1.05); }
+.btn { background:#2a9d8f; color:white; font-weight:600; padding:0.5rem 1rem; border-radius:6px; box-shadow:0 4px 8px rgba(42,157,143,0.4); transition:background 0.3s, transform 0.3s; }
+.btn:hover { background:#264653; transform:scale(1.05); box-shadow:0 6px 12px rgba(38,70,83,0.6); }
+.hero { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:#cce7e8 url('images/pic2.jpeg') no-repeat center center; background-size:cover; padding:2rem; margin-top:4rem; }
+.hero h1 { font-size:2.5rem; margin-bottom:1rem; }
+.hero p { max-width:700px; margin-bottom:2rem; font-size:1.25rem; font-weight:600; }
+.section { padding:3rem 1rem; max-width:900px; margin:0 auto; }
+.section h2 { font-size:2rem; margin-bottom:1rem; }
+.card { background:white; border-radius:12px; box-shadow:0 4px 8px rgba(38,70,83,0.1); overflow:hidden; transition:transform 0.3s, box-shadow 0.3s; cursor:pointer; }
+.card:hover { transform:translateY(-8px); box-shadow:0 10px 20px rgba(38,70,83,0.2); }
+.card img { width:100%; height:220px; object-fit:cover; }
+.card p { padding:1rem; font-weight:600; color:#264653; }
+.gradient-text { background:linear-gradient(90deg,#2a9d8f,#264653); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+footer { background:#264653; color:white; text-align:center; padding:2rem; margin-top:2rem; }
+@media (max-width:640px) { .nav a { font-size:0.9rem; } .brand { font-size:1.5rem; } .btn { padding:0.4rem 0.8rem; font-size:0.85rem; } .hero h1 { font-size:2rem; } .hero p { font-size:1rem; } .section h2 { font-size:1.5rem; } }
+</style>
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="nav fixed w-full top-0 z-50 px-4 sm:px-6 py-4 flex flex-wrap items-center justify-between">
-  <!-- Left menu -->
-  <ul class="flex space-x-4 sm:space-x-6 text-base sm:text-lg font-semibold">
+<!-- Navbar -->
+<nav class="nav">
+  <ul class="flex space-x-4">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
   </ul>
-
-  <!-- Brand -->
-  <h1 class="brand text-xl sm:text-2xl font-bold mx-auto">BloomCast</h1>
-
-  <!-- Right menu -->
-  <ul class="flex space-x-4 sm:space-x-6 text-base sm:text-lg font-semibold ml-auto">
+  <h1 class="brand">BloomCast</h1>
+  <ul class="flex space-x-4">
     <li><a href="creations.html">Creations</a></li>
-    <li>
-      <a href="touch.html" class="btn px-4 sm:px-6 py-2 rounded-lg shadow-lg">Get In Touch</a>
-    </li>
+    <li><a href="touch.html" class="btn">Get In Touch</a></li>
   </ul>
 </nav>
 
 <!-- Hero Section -->
 <section id="home" class="hero">
-  <h1 class="brand text-3xl sm:text-5xl mb-6 floating">Welcome to BloomCast</h1>
-  <p class="max-w-full sm:max-w-xl font-bold mb-8 text-base sm:text-lg leading-relaxed px-2">
-    Our project focuses on recycling plastic and glass waste into beautiful, handcrafted gypsum decorations that feature real plants. Each piece is designed to add a touch of nature’s elegance to your home while promoting eco-conscious living.
-  </p>
+  <h1>Welcome to BloomCast</h1>
+  <p>We recycle plastic & glass waste into beautiful gypsum decorations with real plants. Eco-friendly elegance for your home.</p>
   <button class="btn" onclick="window.location.href='creations.html'">Explore Our Creations</button>
 </section>
 
 <!-- About Section -->
-<section id="about" class="section fade-in text-center sm:text-left">
-  <h2 class="text-2xl sm:text-3xl font-bold mb-6">Our Story</h2>
-  <p class="mb-6 text-base sm:text-lg leading-relaxed px-2">
-    At BloomCast, we blend green entrepreneurship with our passion for sustainability and the SDGs by recycling plastic and glass into gypsum decorations with plants bringing a touch of nature’s elegance into your home.
-  </p>
-  <img src="images/pic3.jpeg" 
-       alt="Artistic gypsum plant decoration" 
-       class="mx-auto rounded-lg shadow-lg max-w-full sm:max-w-md" />
+<section id="about" class="section text-center sm:text-left">
+  <h2>Our Story</h2>
+  <p>At BloomCast, we combine sustainability and creativity, recycling materials into unique home decorations with plants. Our mission is to bring eco-conscious beauty to every corner of your home.</p>
+  <img src="images/pic3.jpeg" alt="Artistic gypsum plant decoration" class="mx-auto rounded-lg shadow-lg max-w-full sm:max-w-md" />
 </section>
 
 <!-- SDGs Section -->
-<section id="sdgs" class="section fade-in">
-  <h2 class="text-2xl sm:text-3xl font-bold mb-8 text-center gradient-text">Sustainable Development Goals</h2>
-  <div class="flex flex-wrap justify-center gap-4 sm:gap-8">
-
-    <div class="card w-full sm:w-48">
-      <img src="sdg/sdg4.jpg" alt="SDG 4" />
-      <p class="text-center mt-2 font-semibold text-sm sm:text-lg">SDG 4: Quality Education</p>
-    </div>
-
-    <div class="card w-full sm:w-48">
-      <img src="sdg/sdg8.png" alt="SDG 8" />
-      <p class="text-center mt-2 font-semibold text-sm sm:text-lg">SDG 8: Decent Work & Growth</p>
-    </div>
-
-    <div class="card w-full sm:w-48">
-      <img src="sdg/sdg9.png" alt="SDG 9" />
-      <p class="text-center mt-2 font-semibold text-sm sm:text-lg">SDG 9: Innovation & Infrastructure</p>
-    </div>
-
-    <div class="card w-full sm:w-48">
-      <img src="sdg/sdg12.png" alt="SDG 12" />
-      <p class="text-center mt-2 font-semibold text-sm sm:text-lg">SDG 12: Responsible Production</p>
-    </div>
-
-    <div class="card w-full sm:w-48">
-      <img src="sdg/sdg17.png" alt="SDG 17" />
-      <p class="text-center mt-2 font-semibold text-sm sm:text-lg">SDG 17: Partnerships</p>
-    </div>
-
+<section class="section text-center">
+  <h2 class="gradient-text">Sustainable Development Goals</h2>
+  <div class="flex flex-wrap justify-center gap-4 sm:gap-8 mt-6">
+    <div class="card w-full sm:w-48"><img src="sdg/sdg4.jpg" alt="SDG4"><p class="text-center">SDG 4: Quality Education</p></div>
+    <div class="card w-full sm:w-48"><img src="sdg/sdg8.png" alt="SDG8"><p class="text-center">SDG 8: Decent Work & Growth</p></div>
+    <div class="card w-full sm:w-48"><img src="sdg/sdg9.png" alt="SDG9"><p class="text-center">SDG 9: Innovation & Infrastructure</p></div>
+    <div class="card w-full sm:w-48"><img src="sdg/sdg12.png" alt="SDG12"><p class="text-center">SDG 12: Responsible Production</p></div>
+    <div class="card w-full sm:w-48"><img src="sdg/sdg17.png" alt="SDG17"><p class="text-center">SDG 17: Partnerships</p></div>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-[#264653] text-white text-center py-6 mt-12 px-2">
-  <p class="text-lg font-semibold">BloomCast</p>
-  <p class="text-sm mt-1 latin-numbers">📞 +961 76 951 225</p>
-  <p class="text-xs mt-2 opacity-80">&copy; 2025 BloomCast. All rights reserved.</p>
+<footer>
+  <p>BloomCast © 2025</p>
+  <p>📞 +961 76 951 225</p>
 </footer>
 
 </body>
